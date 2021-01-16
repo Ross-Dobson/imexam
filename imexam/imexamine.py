@@ -746,7 +746,7 @@ class Imexamine:
                 fitform = getattr(models, form)
             else:
                 raise ValueError(f"Functional form not in available: {self._fit_models}")
-        self.log.info(f"using model: {fitform}")
+        ### self.log.info(f"using model: {fitform}")
 
         # Used for Polynomial1D fitting
         degree = int(pars["order"][0])
@@ -1013,7 +1013,7 @@ class Imexamine:
             ysigma = fit.y_stddev_0.value
 
             pstr = f"xc={(xcenter + xx - delta):.4f}\tyc={(ycenter + yy - delta):.4f}"
-            self.log.info(pstr)
+            ### self.log.info(pstr)
             return (amp,
                     xcenter + xx - delta,
                     ycenter + yy - delta,
